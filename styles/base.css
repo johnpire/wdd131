@@ -1,10 +1,13 @@
 :root {
    --theme-color-primary: #1d4d72;
-    --theme-color-secondary: #333333;
-    --border-solid: 1px solid #333333;
+   --theme-color-secondary: #333333;
+   --border-solid: 1px solid #333333;
 
-    --hard: 0 0 30px var(--theme-color-secondary);
-    --light: 0 1px 2px var(--theme-color-secondary);
+   --hard: 0 0 30px var(--theme-color-secondary);
+   --light: 0 1px 2px var(--theme-color-secondary);
+
+   --primary-font: "PT Serif", serif;
+   --secondary-font: "Lato", sans-serif;
 }
 
 * {
@@ -17,17 +20,24 @@ header, main, footer {
    margin: 0 auto;
 }
 
-body {
-   font-family: Roboto;
+h1 {
+   font: var(--primary-font);
+   font-size: xx-large;
+}
+
+p, h2 {
+   font: var(--secondary-font);
+   font-size: larger;
 }
 
 /* Header */
-.header h2{
+.header p{
    display: block;
    background-color: var(--theme-color-primary);
    color: white;
    padding: 1rem;
    text-align: center;
+   font-size: x-large;
 }
 
 #course-title {
@@ -54,9 +64,19 @@ body {
 }
 
 /* Main */
+
 main {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
+}
+
+#name {
+   grid-column: 1/4;
+   text-align: center;
+   margin: 0.5rem 1rem 0 1rem;
+   border: 3px solid var(--theme-color-secondary);
+   border-radius: 0.8rem;
+   color: var(--theme-color-secondary);
 }
 
 .card {
@@ -141,7 +161,7 @@ main {
 #right ul {
    position: absolute;
    left: 2rem;
-   bottom: 8rem;
+   bottom: 11rem;
 }
 
 /* Footer */
