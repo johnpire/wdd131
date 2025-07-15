@@ -1,0 +1,97 @@
+:root {
+   --theme-color-primary: #3c0a64;
+   --border-solid: 1px solid #333333;
+   --primary-font: "PT Serif", serif;
+   --secondary-font: "Lato",
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main { 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h1 {
+	text-align: center;
+	margin: 1rem;
+}
+
+header {
+    font-family: var(--primary-font);
+	background-color: var(--theme-color-primary);
+	padding: 10px;
+}
+
+header p {
+    color: #fff;
+	margin: 5px;
+	font-size: xx-large;
+}
+
+.navigation ul {
+	list-style: none;
+	display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: larger;
+	display: none;
+}
+
+#temples {
+    display: grid;
+	padding-bottom: 2rem;
+}
+
+figure img {
+    width: 100%;
+	padding: 1rem 1rem 0 1rem;
+}
+
+figcaption {
+	text-align: center;
+	font-size: larger;
+}
+
+footer {
+	background-color: var(--theme-color-primary);
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+	font-size: larger;
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #fff;
+ 	position: absolute;
+	right: 1rem;
+	top: 1.1rem;
+}
+
+#menu.open
+{
+	font-size: 0;
+}
+
+#menu.open::before {
+	content: "X";
+	font-size: 1.5rem;
+}
+	
+.open a {
+	display: block;
+}	

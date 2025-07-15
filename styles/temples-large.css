@@ -1,0 +1,29 @@
+@media screen and (min-width: 740px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.navigation ul {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+	.navigation a {
+		flex: 1 1 100%;
+		display: block;
+	}
+
+    #temples {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+	figure img {
+    padding: 0;
+	}
+
+	#menu {
+		display: none;
+	}
+}
