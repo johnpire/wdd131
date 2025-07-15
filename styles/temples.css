@@ -1,8 +1,6 @@
 :root {
    --theme-color-primary: #3c0a64;
-   --border-solid: 1px solid #333333;
    --primary-font: "PT Serif", serif;
-   --secondary-font: "Lato",
 }
 
 * {
@@ -21,16 +19,20 @@ main h1 {
 	margin: 1rem;
 }
 
+main h2 {
+	text-align: center;
+	margin: 1rem;
+}
+
 header {
     font-family: var(--primary-font);
 	background-color: var(--theme-color-primary);
 	padding: 10px;
 }
 
-header p {
+header h1 {
     color: #fff;
 	margin: 5px;
-	font-size: xx-large;
 }
 
 .navigation ul {
@@ -47,6 +49,10 @@ header p {
 	text-decoration: none;
 	font-size: larger;
 	display: none;
+}
+
+.navigation a:hover {
+	color: yellow;
 }
 
 #temples {
