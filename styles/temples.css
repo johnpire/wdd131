@@ -30,9 +30,10 @@ header {
 	padding: 10px;
 }
 
-header h1 {
+header p {
     color: #fff;
 	margin: 5px;
+	font-size: xx-large;
 }
 
 .navigation ul {
