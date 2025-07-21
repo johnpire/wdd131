@@ -1,0 +1,86 @@
+:root {
+   --color-primary: #0f1a2b;
+   --color-secondary: #7fcbf7;  
+   --primary-font: 'Playfair Display', serif;
+   --secondary-font: 'Inter', sans-serif;
+}
+
+* {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+body, p {
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    border-top: 10px solid var(--color-secondary);
+    border-bottom: 10px solid var(--color-secondary);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#data h1, #weather h1 {
+    padding: 1rem;
+}
+
+#data {
+    text-align: center;
+    background-color: #aee5fb;
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+#data p, #weather p {
+    padding: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: x-large;
+    padding-bottom: 1rem;
+}
+
+.container .left {
+    text-align: right;
+    font-weight: bold;
+}
+
+.container .right {
+    text-align: left;
+}
+
+#weather {
+    text-align: center;
+}
+
+#weather img {
+    width: 100px;
+}
+
+footer {
+    color: #fff;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    text-align: center;
+    border-top: 10px solid var(--color-secondary);
+}

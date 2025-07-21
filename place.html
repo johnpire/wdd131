@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03 Assignment: Country Page</title>
+    <meta name="description" content="Explore Finland, a Nordic country known for its stunning natural landscapes, rich culture, high quality of life, and vibrant cities like Helsinki and Tampere.">
+    <meta name="author" content="John Carlo Kitongan">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Finland</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/kaivokatu-hero-large.webp" media="(min-width: 1200px)">
+                <source srcset="images/kaivokatu-hero-medium.webp" media="(min-width: 768px)">
+                <img src="images/kaivokatu-hero-small.webp" alt="Finland" width="768" height="600">
+            </picture>
+        </div>
+        <div id="data">
+            <h1>Data</h1>
+            <div class="container">
+                <div class="left">
+                    <p>Area:</p>
+                    <p>Population:</p>
+                    <p>Capital:</p>
+                    <p>Languages:</p>
+                    <p>Currency:</p>
+                    <p>Time Zone:</p>
+                    <p>Calling Code:</p>
+                    <p>Internet TLD:</p>
+                </div>
+                <div class="right">
+                    <p>338,462 sq km</p>
+                    <p>5,583,911</p>
+                    <p>Helsinki</p>
+                    <p>Finnish</p>
+                    <p>Euro</p>
+                    <p>UTC+3</p>
+                    <p>+358</p>
+                    <p>.fi</p>
+                </div>
+            </div>
+        </div>
+        <div id="weather">
+            <h1>Weather</h1>
+            <img src="images/weather-logo.svg" alt="Weather Logo">
+            <div class="container">
+                <div class="left">
+                    <p>Temperature:</p>
+                    <p>Conditions:</p>
+                    <p>Wind:</p>
+                    <p>Wind Chill:</p>
+                </div>
+                <div class="right">
+                    <p id="temperature"></p>
+                    <p id="conditions"></p>
+                    <p id="windSpeed"></p>
+                    <p id="windChill"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | John Carlo Trinidad Kitongan | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

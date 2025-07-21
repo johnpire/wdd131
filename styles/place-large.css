@@ -1,0 +1,99 @@
+@media screen and (min-width: 740px) {
+    :root {
+    --color-primary: #0f1a2b;
+    --color-secondary: #7fcbf7;
+    }
+
+	* {
+        max-width: 100%;
+    }
+
+    main {
+        position: relative;
+    }
+
+    .hero {
+        border-bottom: 0;
+    }
+
+    #data, #weather {
+        position: absolute;
+        background-color: #7fcbf780;
+        border: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    #data {
+        top: 2rem;
+        left: 2rem;
+        width: 20.343rem;
+        height: 25rem;
+    }
+
+    #weather {
+        bottom: 2rem;
+        right: 2rem;
+        width: 19rem;
+        height: 23rem;
+    }
+
+    #weather img{
+        position: absolute;
+        top: 110px;
+        left: 110px;
+    }
+
+    #data h1, #weather h1 {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+        position: absolute;
+        width: 12rem;
+        left: -15px;
+        height: 3rem;
+        top: 10px;
+    }
+
+    .container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        font-size:larger;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #data {
+        top: 10rem;
+        left: 10rem;
+        width: 25rem;
+        height: 28rem;
+    }
+
+    #weather {
+        bottom: 10rem;
+        right: 10rem;
+        width: 24rem;
+        height: 25rem;
+    }
+
+    .container {
+        font-size: x-large;
+    }
+
+    #data h1, #weather h1 {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+        position: absolute;
+        width: 12rem;
+        left: -15px;
+        height: 3rem;
+        top: 10px;
+    }
+
+    #weather img{
+        position: absolute;
+        top: 110px;
+        left: 150px;
+    }
+}
