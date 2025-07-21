@@ -58,6 +58,7 @@ header {
     grid-template-columns: 1fr 1fr;
     font-size: x-large;
     padding-bottom: 1rem;
+    width: 365px;
 }
 
 .container .left {

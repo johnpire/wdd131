@@ -61,6 +61,7 @@
         bottom: 0;
         padding: 1rem;
         font-size:larger;
+        width: 300px;
     }
 }
 
@@ -81,6 +82,7 @@
 
     .container {
         font-size: x-large;
+        width: 360px;
     }
 
     #data h1, #weather h1 {
