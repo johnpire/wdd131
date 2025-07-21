@@ -34,13 +34,15 @@
         bottom: 2rem;
         right: 2rem;
         width: 19rem;
-        height: 23rem;
+        height: 17rem;
     }
 
     #weather img{
-        position: absolute;
-        top: 110px;
-        left: 110px;
+        display: none;
+    }
+    
+    #weather h1::after {
+        content: " ⛅";
     }
 
     #data h1, #weather h1 {
@@ -74,7 +76,7 @@
         bottom: 10rem;
         right: 10rem;
         width: 24rem;
-        height: 25rem;
+        height: 18rem;
     }
 
     .container {
@@ -92,8 +94,6 @@
     }
 
     #weather img{
-        position: absolute;
-        top: 110px;
-        left: 150px;
+        display: none;
     }
 }
