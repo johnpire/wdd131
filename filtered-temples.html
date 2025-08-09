@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W02 Assignment: Picture Album</title>
+    <meta name="description" content="LDS temple pictures album collection">
+    <meta name="author" content="John Carlo Kitongan">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p>Temple Album</p>
+        <button id="menu">☰</button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Temple</h1>
+        <h2>Location: Europe</h2>
+        <div id="temples"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | John Carlo Trinidad Kitongan | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

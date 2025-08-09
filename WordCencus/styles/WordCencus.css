@@ -1,0 +1,310 @@
+:root {
+    --primary-color: #504B3A; /* Drab Dark Brown */
+    --secondary-color: #DDE392; /* Mindaro */
+    --accent1-color: #2CA6A4; /* Light Sea Green */
+    --accent2-color: #DE9151; /* Persian Orange */
+    --heading-font: "PT Serif", serif;
+    --body-font: "Lato", sans-serif;
+    --opt-text-color: #2c2920;
+
+    /* Box Shadows */
+    --hard: 0 0 30px var(--primary-color);
+    --light: 0 1px 5px var(--primary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: #000;
+}
+
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+.socialmedia {
+    position: absolute;
+    right: 1rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    height: 2rem;
+    width: auto;
+}
+
+footer {
+  margin-top: 1rem;
+  border-top: 1px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Header */
+header {
+	margin: 1rem auto;
+	display: grid;
+	grid-template-columns: 10rem 1fr;
+	align-items: center;
+	border-bottom: 1px solid var(--primary-color);
+}
+
+.navigation {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	font-family: var(--heading-font);
+}
+
+.navigation li {
+	flex: 1 1 auto;
+    text-align: center;
+}
+
+.navigation a {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+.navigation a:hover {
+	color: var(--accent1-color);
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+header img {
+    padding: 1rem;
+    height: 10rem;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    margin: 0.9rem;
+}
+
+/* CONTACT US */
+
+.contact-us {
+    position: relative;
+ }
+
+.contact-us .adventure-planning {
+    position: absolute;
+    width: 360px;
+    height: 200px;
+    top: 19rem;
+    left: 3rem;
+    background-color: var(--secondary-color);
+    box-shadow: var(--hard);
+    opacity: 0.9;
+ }
+
+.contact-us .support-help {
+    position: absolute;
+    width: 360px;
+    height: 200px;
+    top: 19rem;
+    right: 3rem;
+    background-color: var(--secondary-color);
+    box-shadow: var(--hard);
+    opacity: 0.9;
+ }
+
+.adventure-planning .contact-num {
+    position: absolute;
+    width: 1rem;
+    left: 6rem;
+    bottom: 2.3rem;
+}
+
+.support-help .click-button {
+    width: 9rem;
+    left: 5.8rem;
+    bottom: 0.8rem;
+    box-shadow: var(--light);
+}
+
+.contact-us h3 {
+    margin-top: 1rem;
+    top: 20px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.contact-us img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.contact-us h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.contact-us p {
+    text-align: center;
+}
+
+.contact-container {
+    height: 35rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* Contact Info */
+
+.contact-info {
+    display: flex;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.contact-info .right-info {
+    width: 340px;
+}
+
+.right-info {
+    text-align: left;
+    padding: 1rem;
+    position: relative;
+}
+
+.right-info h2 {
+    background-color: var(--accent2-color);
+    color: var(--opt-text-color);
+}
+
+.right-info h3 {
+    background-color: var(--secondary-color);
+}
+
+.contact-info .icon-container {
+    margin: 0.5rem;
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    position: relative;
+    color: var(--opt-text-color);
+}
+
+.icon-container img {
+    position: absolute;
+    width: 1rem;
+}
+
+.icon-container .location {
+    top: 2.4rem;
+}
+
+.icon-container .phone {
+    top: 7rem;
+}
+
+.icon-container .email {
+    top: 10.3rem;
+}
+
+.right-info .socialmedia {
+    left: 5.95rem;
+    bottom: 7rem;
+}
+
+/* INDEX */
+
+/* Hero */
+
+#hero-vid-container{
+    position: relative;
+    height: 475px;
+}
+
+.hero-text {
+    color: azure;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#hero-vid {
+    position: absolute;
+    z-index: -1;
+    width: 840px;
+}
+
+.hero-text-container {
+   background-color: #504B3AB3;
+   position: absolute;
+   width: 840px;
+   padding-top: 1rem;
+}
+
+.click-button {
+    color: azure;
+    background-color: var(--primary-color);
+    border-radius: 0.2rem;
+    width: auto;
+    position: absolute;
+    box-shadow: var(--hard);
+    transition: background-color 0.3s;
+}
+
+#hero-vid-container .click-button {
+    width: 5.6rem;
+}
+
+.click-button:hover {
+    color: var(--primary-color);
+    background-color: var(--accent1-color);
+    border-radius: 0.2rem;
+}
+
+#book-now {
+    position: absolute;
+    bottom: 8rem;
+    left: 358px;
+}
+
+#book-now-h2 {
+    color: azure;
+}
