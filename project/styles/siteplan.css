@@ -30,6 +30,13 @@ h3 {
     color: var(--accent2-color);
 }
 
+/* Logo */
+img.logo {
+            max-width: 200px;
+            display: block;
+            margin-top: 10px;
+        }
+
 /* Sections */
 .section {
     margin-bottom: 30px;
