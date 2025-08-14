@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCencus</title>
+    <meta name="description" content="WordCencus is a text analysis tool that breaks down writing patterns into visual insights.">
+    <meta name="author" content="John Carlo Kitongan">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/WordCencus.css">
+    <link rel="stylesheet" href="styles/WordCencus-large.css">
+    <script src="scripts/WordCencus.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-title-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="WordCencus Logo">
+            </div>
+            <div class="title">
+                <h1>WordCencus</h1>
+            </div>
+        </div>
+
+        <button id="hamburger" aria-label="Menu">&#9776;</button>
+
+        <nav id="mobile-menu" class="hidden">
+            <ul>    
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="WordCencus.html">Word Analyzer</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="main-title">WordCencus: Text Analysis Tool</h1>
+
+        <div class="hero-section">
+            <div class="floating-cards">
+                <div class="info-card">
+                    <h2>Contact Us</h2>
+                    <p>Have questions or suggestions? We'd love to hear from you.</p>
+                    <a href="tel:01632960985" class="contact-number">📞 01 632 960 985</a>
+                </div>
+
+                <div class="info-card">
+                    <h2>Discover WordCencus</h2>
+                    <p>WordCencus transforms your writing into clear, visual insights — helping you write smarter.</p>
+                    <a href="about.html" class="btn-primary">ABOUT US</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="word-cencus">
+            <div class="how-why-grid">
+                <div>
+                    <h1>How It Works</h1>
+                    <p>Using WordCencus is simple. Just paste your text, hit 'Analyze,' and see instant results — from word frequency breakdowns to sentence structure analysis, all in colorful, easy-to-read charts.</p>
+                </div>
+                <div>
+                    <h1>Why Use WordCencus</h1>
+                    <p>WordCencus isn't just about counting words — it's about understanding them. By visualizing your writing patterns, you can spot overused words, balance sentence length, and improve clarity, making every piece of writing more effective.</p>
+                </div>
+            </div>
+
+            <a href="WordCencus.html" class="btn-primary">Analyze Your Text Now!</a>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> WordCencus. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -34,12 +34,28 @@ const searchCharBtn = document.getElementById('searchCharBtn');
 const specificWordResult = document.getElementById('specificWordResult');
 const specificCharResult = document.getElementById('specificCharResult');
 
-// Event Listeners
 analyzeBtn.addEventListener('click', analyzeText);
 searchWordBtn.addEventListener('click', searchWord);
 searchCharBtn.addEventListener('click', searchChar);
 
-// Analayze Whole Text
+textInput.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'Enter') {
+        analyzeText();
+    }
+});
+
+wordSearch.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        searchWord();
+    }
+});
+
+charSearch.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        searchChar();
+    }
+});
+
 function analyzeText() {
     const content = textInput.value;
     if (!content.trim()) {
@@ -57,20 +73,17 @@ function analyzeText() {
     const characterFrequency = getCharFrequency(content, characterCount);
     const charFrequencyOrder = freqDictInDescendingOrder(characterFrequency);
 
-    // Display basic stats
     wordCountEl.textContent = wordCount;
     charCountEl.textContent = characterCount;
     sentenceCountEl.textContent = sentenceCount;
 
-    // Display word frequency
     displayWordFrequency(wordFrequencyOrder);
-
-    // Display character frequency
     displayCharFrequency(charFrequencyOrder);
+
+    document.querySelector('.stats-section').scrollIntoView({ behavior: 'smooth' });
 }
 
 function contentToWords(content) {
-    // myNotes: '\s' means white spaces | '+' means quantifier (one or more) | '/' delimeter if writing regular expressions (regex) 
     return content.split(/\s+/).filter(word => word.length > 0);
 }
 
@@ -126,14 +139,12 @@ function getCharFrequency(content, characterCount) {
 }
 
 function freqDictInDescendingOrder(freqDict) {
-    const entries = Object.entries(freqDict); // myNotes: Converts from object to array so we can sort then convert back to object
-    
+    const entries = Object.entries(freqDict);
     entries.sort((a, b) => b[1].percentage - a[1].percentage);
     const sortedObj = {};
     for (const [key, value] of entries) {
         sortedObj[key] = value;
     }
-    
     return sortedObj;
 }
 
@@ -149,7 +160,6 @@ function countSentences(words) {
     let sentenceCount = 0;
 
     for (let i = 0; i < words.length; i++) {
-        // myNotes: '[]' means "match any of the characters inside me" | '/g' means global flag, will find all matches not just one | '/' delimeter if writing regular expressions (regex)
         const word = words[i].replace(/["']/g, '');
 
         if (!word) continue;
@@ -161,21 +171,19 @@ function countSentences(words) {
                 sentenceCount += 1;
             }
         } else if (END_WORD.some(end => word.endsWith(end))) {
-            // '\.' just means period, \ is necessary since . is a special regex characther
-            // the or '[]' is to return null if no periods are found to avoid error
             if ((word.match(/\./g) || []).length > 1) {
                 if (i + 1 < words.length) { 
                     const nextWord = words[i+1].replace(/["']/g, '');
-                    if (nextWord[0] === nextWord[0].toUpperCase()) { // the '===' here is necessary because unlike python's .isupper which checks if a character is in uppercase, .toUpperCase of JS will make the character uppercase
+                    if (nextWord[0] === nextWord[0].toUpperCase()) {
                         sentenceCount += 1;
                     } else {
-                        continue; // if next word is not uppercase (not end of text, sample: "U.S.A is a...", "when... I.. said...")
+                        continue;
                     }
                 } else {
-                    sentenceCount += 1; // there's no following word (end of text)
+                    sentenceCount += 1;
                 }
             } else {
-                sentenceCount += 1; // if the word only have one dot (means it's a sentence) note: exceptions are already handled in ABBREVIATIONS
+                sentenceCount += 1;
             }
         }
     }
@@ -183,7 +191,6 @@ function countSentences(words) {
     return sentenceCount;
 }
 
-// Display functions
 function displayWordFrequency(wordFrequency) {
     wordFrequencyTable.innerHTML = '';
     
@@ -291,3 +298,21 @@ function searchChar() {
         specificCharResult.textContent = `The character "${char}" was not found in the text.`;
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger menu functionality
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("mobile-menu");
+    
+    if (hamburger && menu) {
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    }
+
+    // Update copyright year
+    const yearEl = document.getElementById("current-year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+});

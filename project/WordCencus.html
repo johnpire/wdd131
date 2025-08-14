@@ -3,96 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Text Analyzer — a free, easy-to-use tool for counting words, characters, and sentences. Quickly analyze your text and improve your writing efficiency.">
+    <title>WordCencus</title>
+    <meta name="description" content="WordCencus is a text analysis tool that breaks down writing patterns into visual insights.">
     <meta name="author" content="John Carlo Kitongan">
-    <link rel="stylesheet" href="styles/WordCencus.css">
-    <link rel="stylesheet" href="styles/WordCencus-large.css">
-    <script src="scripts/WordCencus.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>WordCensus: Text Analysis Tool</title>
+    <link rel="stylesheet" href="styles/WordCencus.css">
+    <link rel="stylesheet" href="styles/WordCencus-large.css">
+    <script src="scripts/WordCencus.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/down-the-river-logo.png" alt="Logo of the Company">
-        <h1>DOWN THE RIVER</h1>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home Page</a></li>
+    <header class="site-header">
+        <div class="logo-title-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="WordCencus Logo">
+            </div>
+            <div class="title">
+                <h1>WordCencus</h1>
+            </div>
+        </div>
+
+        <button id="hamburger" aria-label="Menu">&#9776;</button>
+
+        <nav id="mobile-menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="WordCencus.html">Word Analyzer</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-    </header>        
+    </header>
     <main>
-        <div class="contact-container">
-            <div class="contact-us">
-                <img src="images/hero-contact.jpg" alt="">
-                <h1>Meet Your River Guides</h1>
-                <div class="adventure-planning">
-                    <h3>Plan Your Adventure</h3>
-                    <p>Speak with our adventure planning team to find the perfect trip, date, or group package.</p>
-                    <div class="contact-num">
-                        <img src="images/icons/phone-background.png" alt="Contact:">
+        <section class="hero">
+            <div class="container">
+                <h1>WordCencus</h1>
+                <p>Analyze your text with precision and clarity</p>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <div class="container">
+                <h2>Enter Your Text</h2>
+                <textarea id="textInput" placeholder="Paste or type your text here for analysis..." rows="8"></textarea>
+                <button id="analyzeBtn">Analyze Text</button>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2>Text Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Words</h3>
+                        <span id="wordCount">0</span>
                     </div>
-                    <p>01 632 960 985</p>
-                </div>
-                <div class="support-help">
-                    <h3>Need Assistance on or off the River?</h3>
-                    <p>Our support crew is here to help - from booking changes to safety info.</p>
-                    <a href=""><p class="click-button">Contact Support</p></a>
+                    <div class="stat-card">
+                        <h3>Characters</h3>
+                        <span id="charCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Sentences</h3>
+                        <span id="sentenceCount">0</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact-info">
-            <div class="right-info">
-                <h2>Headquarters</h2>
-                <h3>California, United States</h3>
-                <div class="icon-container">
-                    <img class= "location" src="images/icons/location.png" alt="Location">
-                    <p>Willow Creek, California 9557</p>
-                    <img class= "phone" src="images/icons/phone.png" alt="Phone">
-                    <p>Phone: 01 632 960 985</p>
-                    <img class= "email" src="images/icons/email.png" alt="Email">
-                    <p>Email: <a href="http://google.com/">downtheriver.rafting@gmail.com</a></p>
-                </div>
+        <section class="search-section">
+            <div class="container">
+                <div class="search-grid">
+                    <div class="search-box">
+                        <h3>Search Word</h3>
+                        <div class="search-input">
+                            <input type="text" id="wordSearch" placeholder="Enter word">
+                            <button id="searchWordBtn">Search</button>
+                        </div>
+                        <div id="specificWordResult" class="search-result"></div>
+                    </div>
 
-                <nav class="socialmedia">
-                    <a href="https://www.facebook.com/">
-                        <img src="images/social-media-logo/facebook.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com/">
-                        <img src="images/social-media-logo/instagram.png" alt="instagram">
-                    </a>
-                    <a href="https://www.youtube.com/">
-                        <img src="images/social-media-logo/youtube.png" alt="YouTube">
-                    </a>
-                </nav>
+                    <div class="search-box">
+                        <h3>Search Character</h3>
+                        <div class="search-input">
+                            <input type="text" id="charSearch" placeholder="Enter character" maxlength="1">
+                            <button id="searchCharBtn">Search</button>
+                        </div>
+                        <div id="specificCharResult" class="search-result"></div>
+                    </div>
+                </div>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96218.18047408524!2d-123.71698171228905!3d40.948488574748744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54d17dbb5ba267c3%3A0xaea52bec721079ca!2sWillow%20Creek%2C%20CA%2095573%2C%20USA!5e1!3m2!1sen!2sph!4v1749568471632!5m2!1sen!2sph" 
-                width="500" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="frequency-section">
+            <div class="container">
+                <div class="table-grid">
+                    <div class="table-container">
+                        <h3>Word Frequency</h3>
+                        <div class="table-wrapper">
+                            <table id="wordFrequencyTable">
+                                <thead>
+                                    <tr>
+                                        <th>Word</th>
+                                        <th>Count</th>
+                                        <th>Frequency %</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <h3>Character Frequency</h3>
+                        <div class="table-wrapper">
+                            <table id="charFrequencyTable">
+                                <thead>
+                                    <tr>
+                                        <th>Character</th>
+                                        <th>Count</th>
+                                        <th>Frequency %</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy;<span id="currentyear"></span> | John Carlo Trinidad Kitongan</p>
-        <nav class="socialmedia">
-            <a href="https://www.facebook.com/">
-                <img src="images/social-media-logo/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/">
-                <img src="images/social-media-logo/instagram.png" alt="instagram">
-            </a>
-            <a href="https://www.youtube.com/">
-                <img src="images/social-media-logo/youtube.png" alt="YouTube">
-            </a>
-        </nav>
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> WordCencus. All rights reserved.</p>
     </footer>
 </body>
 </html>
