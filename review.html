@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+    
+    <main>
+        <div class="confirmation">
+            <h2>Thank You for Your Review!</h2>
+            <p>Your feedback has been successfully submitted.</p>
+            <div class="review-count">
+                <p>Total Reviews Submitted: <span id="counter">0</span></p>
+            </div>
+            <a href="form.html" class="btn">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Product Review System | All Rights Reserved</p>
+        <p>Your feedback helps us improve our products!</p>
+    </footer>
+
+    <script>
+        // Review counter functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = localStorage.getItem('reviewCount') || 0;
+            count = parseInt(count) + 1;
+            localStorage.setItem('reviewCount', count);
+            document.getElementById('counter').textContent = count;
+        });
+    </script>
+</body>
+</html>

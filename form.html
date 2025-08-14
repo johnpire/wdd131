@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="wf1">
+            <div class="form-section">
+                <h2>Product Information</h2>
+                <label>Product Name*
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product &#9662;</option>
+                    </select>
+                </label>
+                
+                <label>Overall Rating*</label>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                </div>
+
+                <label>Date of Installation*
+                    <input type="date" id="installDate" name="installDate" required>
+                </label>
+            </div>
+
+            <div class="form-section">
+                <h2>Features & Experience</h2>
+                <div>Useful Features (check all that apply)</div>
+                    <label class="checkbox-label"><input type="checkbox" name="features" value="easy-setup"> Easy Setup</label>
+                    <label class="checkbox-label"><input type="checkbox" name="features" value="good-instructions"> Good Instructions</label>
+                    <label class="checkbox-label"><input type="checkbox" name="features" value="works-as-expected"> Works as Expected</label>
+                    <label class="checkbox-label"><input type="checkbox" name="features" value="better-than-expected"> Better than Expected</label>
+                    <label class="checkbox-label"><input type="checkbox" name="features" value="good-value"> Good Value</label>
+
+                <label>Written Review
+                    <textarea id="writtenReview" name="writtenReview" placeholder="Share your thoughts about this product..."></textarea>
+                </label>
+            </div>
+
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <label>Your Name
+                    <input type="text" id="userName" name="userName" placeholder="Enter your name (optional)">
+                </label>
+            </div>
+
+            <input type="submit" value="Submit Product Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Product Review System | All Rights Reserved</p>
+        <p>Thank you for taking the time to share your feedback!</p>
+    </footer>
+</body>
+</html>

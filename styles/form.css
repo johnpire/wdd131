@@ -1,0 +1,193 @@
+/*----------- GLOBAL STYLES --------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*----------- HEADER --------------*/
+header {
+    background: #51cf66;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+/*----------- FORM STYLING --------------*/
+.wf1 {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.wf1 label {
+    display: block;
+    margin-top: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.wf1 input[type="text"],
+.wf1 input[type="date"],
+.wf1 select,
+.wf1 textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.wf1 input:focus,
+.wf1 select:focus,
+.wf1 textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.wf1 input:required,
+.wf1 select:required {
+    border-right: 5px solid #ff6b6b;
+}
+
+.wf1 input:required:valid,
+.wf1 select:required:valid {
+    border-right: 5px solid #51cf66;
+}
+
+/* Star Rating */
+/* stars */
+input[type="radio"] {
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.stars > label {
+    color: gold;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+    color: gold;
+}
+
+.stars > label::before {
+    content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+    content: "\2605";
+}
+
+
+/* Checkbox */
+.checkbox-label {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    transform: scale(1.5); 
+    margin-right: 10px;
+}
+
+/* Textarea */
+.wf1 textarea {
+    height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Submit Button */
+.wf1 input[type="submit"] {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.wf1 input[type="submit"]:hover {
+    background: linear-gradient(to right, #219653, #27ae60);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*----------- FOOTER --------------*/
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .wf1 {
+        padding: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
